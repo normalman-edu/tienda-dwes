@@ -24,16 +24,17 @@
     $state=$_GET["state"];
   }
   if ("normal" == $state)
-    include("./include/header.php");
-  else if("popup" == $state){
-    $urlCanonical = $producto->getUrl();
-    include("./include/header-popup.php");
-  } else if("json" == $state){
-    echo $producto->getJson();
-    //Al hacer exit(), sale de este script y ya no carga nada más
-    exit();
-  } else if("exclusive" == $state){
-    }
+     include("./include/header.php");
+   else if("popup" == $state){
+     $urlCanonical = $producto->getUrl();
+     include("./include/header-popup.php");
+   } else if("json" == $state){
+     echo $producto->getJson();
+     //Al hacer exit(), sale de este script y ya no carga nada más
+     exit();
+   } else if("exclusive" == $state){
+
+  }
 
 ?>
   <div class="row" id='infoProducto' style='position:relative; border:1px solid #ddd; border-radius:4px; padding:4px;' >

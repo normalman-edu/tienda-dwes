@@ -39,6 +39,18 @@ class Carrito
       unset($_SESSION['carrito']);
       self::__construct();
     }
+
+    public function itemExists($id){
+      return isset($_SESSION['carrito'][$id]);
+    }
+
+    public function getItemCount($id){
+      if (!$this->itemExists($id))
+      return 0;
+      else
+        return $_SESSION['carrito'][$id];
+    }
+
     public function howMany(){
       return count($_SESSION['carrito']);
     }
